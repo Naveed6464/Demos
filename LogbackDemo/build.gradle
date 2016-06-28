@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+sourceCompatibility = '1.7'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.naveed.demo.Main'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    //Slf4j and Logback
+    compile "org.slf4j:slf4j-api:1.7.13",
+                "ch.qos.logback:logback-classic:1.1.3"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

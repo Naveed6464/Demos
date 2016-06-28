@@ -1,0 +1,13 @@
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 \
+     -Dversion=10.2.0.3.0 -Dpackaging=jar -Dfile=ojdbc.jar -DgeneratePom=true
+
+<property name="javax.persistence.jdbc.url" value="jdbc:h2:C:/DB/fursan"/>            
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+
+<dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.186</version>
+        </dependency>

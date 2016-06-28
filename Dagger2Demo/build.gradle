@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+sourceCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.naveed.dagger.demo.Main'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'com.google.dagger:dagger:2.0.2'
+    compile 'com.google.dagger:dagger-compiler:2.0.2'
+    testCompile group: 'junit', name: 'junit', version: '4.10'
+}

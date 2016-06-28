@@ -1,0 +1,6 @@
+03-06 14:57:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "AGENTANALYSIS" not found; SQL statement:
+SELECT ID FROM AGENTANALYSIS WHERE ID <> ID [42102-186]
+03-06 14:57:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PDFDOCUMENT" not found; SQL statement:
+SELECT ID FROM PDFDOCUMENT WHERE ID <> ID [42102-186]

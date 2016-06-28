@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+sourceCompatibility = '1.6'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.naveed.demo.Main'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile "org.bouncycastle:bcpg-jdk15on:1.54"  
+    compile "org.bouncycastle:bcprov-jdk15on:1.54"
+    compile 'commons-io:commons-io:2.4'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

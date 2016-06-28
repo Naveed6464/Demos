@@ -1,0 +1,49 @@
+apply plugin: 'java'
+apply plugin: 'osgi'
+
+apply plugin: 'com.athaydes.osgi-run'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "com.athaydes.gradle.osgi:osgi-run-core:1.4.2"
+    }
+}
+
+
+sourceCompatibility = '1.7'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.naveed.felix.demo.Main'
+}
+
+repositories {
+    mavenCentral()    
+    mavenLocal()
+}
+
+dependencies {
+    compile 'org.apache.felix:org.apache.felix.framework:5.4.0'
+    //compile group: 'org.osgi', name: 'org.osgi.enterprise', version: '5.0.0'    
+    compile 'org.osgi:org.osgi.core:6.0.0'
+    osgiRuntime group: 'org.apache.felix', name: 'org.apache.felix.configadmin', version: '1.8.8'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+runOsgi {
+    bundles += project
+}
+
+version = '1.0.0'
+
+jar {
+    manifest {
+        instruction 'Export-Package', ''
+        instruction 'Import-Package', 'org.osgi.framework'
+        instruction 'Bundle-Activator', 'com.naveed.felix.demo.Activator'
+        //instruction 'Bundle-Version', '1.0.0.${tstamp}'
+    }
+}

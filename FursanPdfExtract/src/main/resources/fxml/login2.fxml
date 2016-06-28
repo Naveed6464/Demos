@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="bg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <BorderPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <center>
+        <StackPane id="login-bg" prefHeight="150.0" prefWidth="200.0">
+          <children>
+            <!--<ImageView id="" fitHeight="400.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/ATTLogin.png" />
+                            </image>
+                        </ImageView>-->
+            <GridPane id="" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="342.0" style="">
+              <children>
+                <Button id="bg-form-btn" mnemonicParsing="false" onAction="#login" style="" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <font>
+                    <Font size="13.0" />
+                  </font>
+                </Button>
+                <Label text="Username" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <font>
+                    <Font name="System Bold" size="13.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label font="$x1" text="Password" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="userName" maxWidth="200.0" prefHeight="28.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <PasswordField fx:id="password" minHeight="28.0" onKeyPressed="#loginKeyEvent" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="loginMsgLbl" font="$x1" text="Msg" textFill="RED" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="135.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="212.0" />
+              </columnConstraints>
+              <padding>
+                <Insets bottom="10.0" left="30.0" right="20.0" top="10.0" />
+              </padding>
+              <rowConstraints>
+                <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="64.0" minHeight="6.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </StackPane>
+      </center>
+    </BorderPane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.saladin.client.ui.presenter.BasicPresenter">
+    <children>
+        <BorderPane fx:id="border" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="800.0" spacing="15.0" style="" styleClass="deafaultHeader">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#save" text="Save" />
+                        <Button mnemonicParsing="false" onAction="#clear" text="Clear" />
+                        <Button mnemonicParsing="false" onAction="#back" text="Back" />
+                    </children>
+                </HBox>
+            </top>
+        </BorderPane>
+    </children>
+    <stylesheets>
+        <URL value="@../styles.css" />
+    </stylesheets>
+</AnchorPane>

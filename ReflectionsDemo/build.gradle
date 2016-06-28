@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+sourceCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.naveed.reflections.demo.Main'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()    
+}
+
+ext.guiceVersion = '4.0'    
+ext.reflectionsVersion = '0.9.10'
+ext.guavaVersion = '18.0'
+ext.antlrVersion = '4.5.1'
+
+dependencies {
+    compile "org.reflections:reflections:$reflectionsVersion" 
+    testCompile group: 'junit', name: 'junit', version: '4.10'
+}

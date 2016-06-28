@@ -1,0 +1,133 @@
+#bg{
+    -fx-background-image: url("images/ATTBackGround.png");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+
+#login-bg{
+    -fx-background-image: url("images/ATTLogin.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+#playback-bg{
+    -fx-background-image: url("images/playback.png");
+    -fx-background-repeat: no-repeat;    
+    -fx-background-size:48px 48px;
+}
+
+#playback-bg{
+    -fx-background-image: url("images/playback.png");
+    -fx-background-repeat: no-repeat;    
+    -fx-background-size:48px 48px;
+}
+
+#record-bg{
+    -fx-background-image: url("images/record.png");
+    -fx-background-repeat: no-repeat;    
+    -fx-background-size:48px 48px;
+}
+
+#settings-bg{
+    -fx-background-image: url("images/settings.png");
+    -fx-background-repeat: no-repeat;    
+    -fx-background-size:48px 48px;
+}
+
+#dashboard-bg{
+    -fx-background-image: url("images/dashboard.png");
+    -fx-background-repeat: no-repeat;    
+    -fx-background-size:48px 48px;
+}
+
+#reports-bg{
+    -fx-background-image: url("images/reports.png");
+    -fx-background-repeat: no-repeat;    
+    -fx-background-size:48px 48px;
+}
+
+#admin-bg{
+    -fx-background-image: url("images/users.png");
+    -fx-background-repeat: no-repeat;    
+    -fx-background-size:48px 48px;
+}
+
+
+
+#bg-color {
+    -fx-background-color: white;
+}
+
+.deafaultHeader {
+    -fx-background-color: #336699;
+}
+
+.header {
+    -fx-padding: 20;
+    -fx-background-color: linear-gradient(#98a8bd 0%, #8195af 25%, #6d86a4 100%);
+    -fx-text-fill: white;
+}
+
+.header .title {    
+
+    -fx-font-smoothing-type: lcd;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-font-size: 15pt;
+
+}
+
+.header .tag-line {
+    -fx-font: 12pt "Tahoma Bold";
+
+}
+
+.body {
+    -fx-padding: 20;
+}
+
+.iphone-button {
+    -fx-background-color:
+        #a6b5c9,
+        linear-gradient(#303842 0%, #3e5577 20%, #375074 100%),
+        linear-gradient(#768aa5 0%, #849cbb 5%, #5877a2 50%, #486a9a 51%, #4a6c9b 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 7 10 7 10;
+    -fx-font-family: "Arial";
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-smoothing-type: lcd;
+}
+
+
+.form-label {
+    -fx-font-size: 14;
+    -fx-text-fill: dimgray;
+}
+
+.form-editor {
+    -fx-font-size: 16;
+}
+
+.form-editor-invalid {    
+    -fx-text-fill: red;
+}
+
+.form-label-invalid {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+.form-title {
+    -fx-font-size: 20;
+    -fx-text-fill: dimgray;
+}
+
+.form-tooltip {
+    -fx-font-size: 11;
+    -fx-text-fill: gray;
+}

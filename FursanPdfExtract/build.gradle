@@ -1,0 +1,53 @@
+apply plugin: 'java'
+
+//apply plugin: org.bitbucket.shemnon.javafxplugin.JavaFXPlugin
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            name = 'BinTray'
+            url = 'http://dl.bintray.com/content/shemnon/javafx-gradle/'
+        }
+		maven  { url "http://repo1.maven.org/maven2" }
+    }
+    dependencies {
+        classpath 'org.bitbucket.shemnon.javafxplugin:gradle-javafx-plugin:8.1.1'		
+        classpath project.files("${System.properties['java.home']}/../lib/ant-javafx.jar")
+        classpath project.files("${System.properties['java.home']}/lib/jfxrt.jar")
+        //classpat 'net.java.openjdk.openjfx:jfx-packager:8.0.0-SNAPSHOT'        
+    }
+}
+
+//javafx {
+    //mainClass = 'com.saladin.client.App'
+//}
+
+sourceCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.naveed.fursan.pdf.extract.Main'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile "org.saladinframework:Saladin-Fx:1.0"
+    compile 'org.controlsfx:controlsfx:8.40.10'
+    
+    compile 'org.apache.pdfbox:pdfbox:2.0.0-RC3'
+    compile 'com.itextpdf:itextpdf:5.5.8'
+    compile 'com.google.guava:guava:19.0'
+    compile 'org.beanio:beanio:2.1.0'
+    compile 'org.eclipse.persistence:eclipselink:2.5.2'
+    compile "com.h2database:h2:1.4.186"
+    //Slf4j and Logback
+    compile "org.slf4j:slf4j-api:1.7.10",
+        "ch.qos.logback:logback-classic:1.1.2"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

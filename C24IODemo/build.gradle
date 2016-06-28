@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+sourceCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.naveed.c24io.demo.Main'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url "http://repo.c24io.net/nexus/content/groups/public"
+    }
+    maven{
+        url "http://download.java.net/maven/2"
+    }
+}
+
+dependencies {
+    //compile 'biz.c24.io:c24-io-api:4.8.0'
+    testCompile group: 'junit', name: 'junit', version: '4.10'
+}

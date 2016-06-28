@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+sourceCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.naveed.reports.demo.Main'
+}
+
+repositories {
+    mavenLocal()
+    maven  { url "http://repo1.maven.org/maven2" }
+    //mavenCentral()
+}
+
+ext.h2DBVersion = '1.4.186'
+ext.eclipseLinkVersion = '2.5.2'
+
+dependencies {
+    compile 'net.sourceforge.dynamicreports:dynamicreports-core:4.0.0'
+    //compile ("org.eclipse.persistence:eclipselink:$eclipseLinkVersion")
+    compile "com.h2database:h2:$h2DBVersion"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
